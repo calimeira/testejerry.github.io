@@ -1,0 +1,12 @@
+@import '../imports-helpers.scss';
+@import '../imports.scss';
+
+.sucess-section{
+    height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .circle-blur{
+        transform: translateY(-50%);
+    }
+}

@@ -1,0 +1,277 @@
+
+.carousel-benefits{
+    &-item {
+        position: relative;
+        transition: 0.3s;
+        padding-top: 40px;
+        padding-bottom: 90px;
+        &:hover {
+            .carousel-benefits-thumb-hover{
+                display: block;
+                transition: 0.3s;
+            }
+        }
+        @include media-md{
+            max-width: 250px;
+            min-width: 250px;
+        }
+    }
+    &-thumb{
+        img{
+            border-radius: 6px;
+            @include media-md{
+                object-fit: cover;
+                min-height: 200px;
+            }
+        }
+    }
+    &-thumb-hover {
+        display: none;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        right: -20px;
+        background: linear-gradient(168.82deg, #A5761C 1.7%, #DC9C22 71.5%, #A5761C 99.52%);
+        color: $white;
+        padding: 20px;
+        border: 0px solid transparent;
+        border-radius: 6px;
+        transition: 0.3s;
+        filter: drop-shadow(0px 4px 55px rgba(191, 0, 24, 0.2));
+        .thumb-figcaption{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+            align-items: flex-end;
+            @include media-md{
+                font-size: 14px;
+                line-height: 1.5;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+        }
+        .thumb-link{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        img{
+            border-radius: 6px;
+            @include media-md{
+                object-fit: cover;
+                min-height: 200px;
+            }
+        }
+        figure{
+            @include media-md{
+                margin: 0;
+            }
+        }
+        @include media-md{
+            top: 12px;
+        }
+    }
+}
+
+
+
+.thumb-nft{
+    background: $gradient-frame;
+    padding: 10px;
+    border-radius: 6px;
+    height: auto;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    z-index: 3;
+    &-figure{
+        position: relative;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &-figcaption {
+        background-image: url(../../img/frame-thumb.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left bottom;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 70%;
+        padding: 10px 0px 10px 5px;
+        font-family: $primary-font;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: -0.01em;
+        color: $white;
+        line-height: 2;
+        @include media-xs{
+            width: 80%;
+        }
+        @include media-xxs{
+            height: 65px;
+            width: 75%;
+            font-size: 16px;
+        }
+    }
+    &-img{
+        height: auto;
+        min-width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+    &-title-box{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: -10px;
+    }
+}
+
+.thumb-team{
+    text-align: center;
+    &-figure{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-figcaption{
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 18px;
+    }
+    &-img {
+        border-radius: 50%;  
+        &-border{
+            background: $gradient-gold;
+            padding: 2px;
+            border-radius: 50%;
+            width: fit-content;
+            height: fit-content;
+            margin-bottom: 35px;
+            filter: drop-shadow(8px 42px 80px rgba(0, 0, 0, 0.1));
+        }
+        @include media-lg{
+            max-width: 140px;
+        }
+    }
+    &-socialmedia{
+        margin-top: 15px;     
+        :first-child{
+            margin-right: 5px;
+        }   
+    }
+}
+
+
+.thumb-gallery{
+    background: linear-gradient(172.86deg,#DC9C22 2.52%,#A5761C 27%,#A5761C 45.98%,#523808 82.8%);
+    padding: 10px;
+    border-radius: 6px;
+    height: auto;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    z-index: 3;
+    &-link{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+    }
+    &-figure{
+        position: relative;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &-figcaption {
+        content: "";       
+        font-family: $primary-font;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: -0.01em;
+        color: $white;
+        line-height: 2;
+    }
+    &-img{
+        height: auto;
+        min-width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+        &-box{
+            position: relative;
+        }
+    }
+    &-number{
+        position: absolute;
+        background-image: url(../../img/frame-thumb-2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left bottom;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 0px 10px 5px;
+        font-family: $primary-color;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    &-title-box{
+        display: flex;
+        align-items: flex-end;
+    }
+    &-info{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+    .propietary{
+        &-box{
+            display: flex;
+            flex-direction: column;
+            font-family: $terciary-font;
+            font-weight: 600;
+            color: $white;
+            font-size: 12px;
+            img{
+                width: 21px;
+                height: 21px;
+                border-radius: 50%;
+                margin-right: 7px;
+            }
+            p{
+                small{
+                    font-weight: 400;
+                    font-size: 10px;
+                    opacity: 0.7
+                }
+            }
+        }
+        &-info{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .price-box{
+        text-align: end;
+        font-family: $terciary-font;
+        p{
+            small{
+                font-weight: 400;
+                font-size: 10px;
+                opacity: 0.7
+            }
+        }
+    }
+}
+
+

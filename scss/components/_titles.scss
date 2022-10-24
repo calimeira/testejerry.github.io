@@ -1,0 +1,172 @@
+.title{
+    &-primary {
+        font-family: $primary-font;
+        font-weight: 700;
+        font-size: 122px;
+        line-height: 112px;
+        color: $white;
+        margin-bottom: 0;
+        @include media-xl{
+            font-size: 110px;
+            line-height: 1;
+        }
+        @include media-md{
+            font-size: 96px;
+        }
+        @include media-sm{
+            font-size: 80px;
+        }
+        @include media-xs{
+            font-size: 74px;
+        }
+    }
+    &-secondary {
+        font-family: $primary-font;
+        font-weight: 700;
+        font-size: 50px;
+        letter-spacing: -0.02em;
+        color: $primary-color;
+        margin-bottom: 0;
+        &.big{
+            font-size: 78px;
+            @include media-md{
+                font-size: 45px;
+                line-height: 1;
+            }
+        }
+        @include media-lg{
+            font-size: 45px;
+        }
+        @include media-sm{
+            font-size: 32px;
+        }
+    }
+    &-terciary{
+        font-family: $primary-font;
+        font-weight: 300;
+        font-size: 32px;
+        margin-bottom: 0;
+        letter-spacing: -0.02em;
+        color: $primary-color;
+        width: max-content;
+        @include media-xs{
+            font-size: 24px;
+        }
+    }
+}
+
+.resume-title {
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: $white;
+    .counter{
+        font-size: 96px;
+        display: block;
+        @include media-lg{
+            font-size: 75px;
+        }
+        @include media-md{
+            font-size: 68px;
+        }
+    }
+    @include media-lg{
+        font-size: 20px;
+    }
+}
+
+.rotate-title{
+    width: max-content;
+    position: relative;
+    top: 80px;
+    transform: rotate(-90deg);
+    @include media-md{
+        left: -60px;
+    }
+    @include media-xs{
+        left: -40px;
+    }
+}
+
+.team-section{
+    .rotate-title{
+        @include media-xs{
+            left: -20px;
+        }
+    }
+}
+
+.faqs-section{
+    .rotate-title{
+        left: -160px;
+        top: 150px;
+    }
+}
+
+.thumb-nft-title{
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-right: 5px;
+    @include media-xl{
+        font-size: 12px;   
+    }
+    @include media-xxs{
+        font-size: 16px;   
+    }
+}
+
+.thumb-nft-price{
+    font-family:  $primary-font;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: -0.01em;
+    color: #C4C4C4;
+    line-height: 1.2;
+    @include media-xl{
+        font-size: 10px;   
+    }
+    @include media-xxs{
+        font-size: 16px;   
+    }
+}
+
+.thumb-team-title{
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: $white;
+}
+
+.thumb-gallery-price{
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: $secondary-color;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    svg{
+        margin-right: 5px;
+    }
+}
+
+.contact-titles{
+    .title-secondary{
+        line-height: 84px;
+        @include media-md{
+            line-height: 1;
+        }
+    }
+}
+
+.wfg-title{
+    @include media-xs{
+        font-size: 13px;
+    }
+}

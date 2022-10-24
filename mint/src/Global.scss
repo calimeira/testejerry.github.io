@@ -1,0 +1,40 @@
+// Override default variables before the import
+$body-bg: white;
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+@import-normalize;
+
+@import 'styles/imports.scss';
+@import 'styles/imports-helpers.scss';
+@import 'styles/layout/footer.scss';
+
+* {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    font-family: $secondary-font;
+    color: $white;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: $black;
+    line-height: 26px;
+    overflow-x: hidden;
+    p{
+        margin-bottom: 0;
+    }
+}
+main{
+    padding-top: 130px;
+    @include media-xs{
+        padding-top: 120px;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+}

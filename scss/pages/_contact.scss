@@ -1,0 +1,60 @@
+.contact-section{
+    padding: 225px 0;
+    .rotate-title{
+        top: 60px;
+        left: -60px;
+        @include media-md{
+            top: 40px;
+        }
+        @include media-xs{
+            top: 20px;
+            left: -40px;
+        }
+    }
+    @include media-md{
+        padding: 130px 0;
+    }
+}
+
+
+.contact-titles{    
+    :first-child{
+        position: relative;
+        padding-bottom: 45px;
+        margin-bottom: 55px;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background-color: $primary-color;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    @include media-md{
+        padding-left: 50px;
+    }
+}
+
+.sucess-section{
+    height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .circle-blur{
+        transform: translateY(-50%);
+    }
+}
+
+.contact-titles, .contact-form{
+    @include media-md{
+        margin-top: -50px;
+    }
+}
+
+.contact-form{
+    @include media-sm{
+        margin-top: 90px;
+    }
+}

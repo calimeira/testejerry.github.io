@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/* Developer: Juan Ignacio Cieri */
+/* Developer URI: http://juancieri.com */
+
+// Bootstrap
+@import "../bootstrap/scss/bootstrap";
+
+// Other plugins
+@import 'aos.min.css';
+@import 'animate.min.css';
+@import 'all.css';
+@import 'fancybox.min.css';
+
+@import 'helpers/_variables';
+@import 'helpers/_mixins';
+@import 'components/_fonts';
+@import 'layout/_grid';
+
+// COMMON
+* {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    font-family: $secondary-font;
+    color: $white;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: $black;
+    line-height: 26px;
+    overflow-x: hidden;
+    p{
+        margin-bottom: 0; 
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+}
+
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'components/_carousel';
+@import 'components/_buttons';
+@import 'components/_forms';
+@import 'components/_modals';
+@import 'components/_titles';
+@import 'components/_bg';
+@import 'components/_animate';
+@import 'components/_thumbs';
+
+// PAGES
+@import 'pages/_home';
+@import 'pages/_faqs';
+@import 'pages/_gallery';
+@import 'pages/_contact';
+@import 'pages/_open-nft';
+
+// CUSTOM SCROLLBAR
+@include scrollbars(.3em, $primary-color);
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    height: 175px;
+    background-color:$secondary-color;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}

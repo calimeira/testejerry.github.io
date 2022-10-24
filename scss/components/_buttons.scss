@@ -1,0 +1,123 @@
+.btn {
+    outline: none !important;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    transition: 0.3s;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    font-family: $terciary-font;
+    border-radius: 3px;
+    &:hover, &:focus {
+        border: none;
+        box-shadow: none;
+    }
+    
+    &-primary {
+        background:  $gradient-gold;
+        padding: 15px 50px;
+        display: inline-flex;
+        align-items: center;
+        transition: 0.8s;
+        background-size: 100%;
+        background-position: 0%;
+        svg{
+            transition: 0.5s;
+            position: relative;
+            left: 0;
+            margin-left: 20px;
+        }
+        &:hover, &:focus {
+            transition: 0.5s;
+            background-size: 400%;
+            background-position: 100%;
+            svg{
+                transition: 0.5s;
+                left: 5px;
+            }
+        }       
+        @include media-xl{
+            padding: 15px 40px;
+        } 
+        @include media-lg{
+            padding: 15px 30px;
+        }
+        @include media-md{
+            padding: 15px 50px;
+        }
+        @include media-xs{
+           width: 100%;
+           text-align: center;
+           justify-content: center;
+        }
+    }
+    
+    &-secondary {
+        border: 1px solid rgba($white, 0.3);
+        background: transparent;
+        transition: 0.5s;
+        padding: 14px 70px;
+        &:hover, &:focus {
+            transition: 0.5s;
+            border: 1px solid $white;
+            background: transparent;
+        }
+        &.nav-nft{
+            padding: 10px 50px;
+            text-transform: none;
+            letter-spacing: normal;
+            font-weight: 700;
+            font-size: 18px;
+            .fa-arrow-left{
+                margin-right: 10px;
+            }
+            .fa-arrow-right{
+                margin-left: 10px;
+            }
+            @include media-xs{
+                padding: 10px 22px;
+            }
+        }
+        @include media-xl{
+            padding: 15px 60px;
+        }
+        @include media-lg{
+            padding: 15px 50px;
+        }
+        @include media-md{
+            padding: 15px 70px;
+        }
+        @include media-xs{
+            width: 100%;
+            text-align: center;
+         }
+    }
+    &-buy {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 50px;
+        font-weight: 600;
+        background: linear-gradient(97.01deg, #131313 23.17%, #231700 60.19%, #131313 98.79%);
+        border-radius: 3px;
+        svg{
+            margin-left: 20px;
+        }
+    }
+}
+
+.btn-social-media{
+    text-decoration: none;
+}
+
+
+.thumb-gallery{
+    &:hover{
+        .btn-buy{
+            color: $white;
+            background: linear-gradient(97.01deg, #231700 23.17%, #131313 60.19%, #231700 98.79%);            
+        }
+    }
+}

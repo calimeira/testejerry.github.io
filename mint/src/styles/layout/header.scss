@@ -1,0 +1,109 @@
+@import '../imports-helpers.scss';
+
+// HEADER
+
+header{
+    padding-top: 40px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 99999999;
+    transition: 0.3s;
+    &.smaller{
+        padding-top: 30px;
+        transition: 0.3s;
+        background: rgba($black, 0.5);
+        .navbar-brand{
+            .ponzio-logo{
+                max-width: 110px;
+                transition: 0.3s;
+            }
+            .circle-logo {
+                max-width: 35px;
+                max-height: 35px;
+                transition: 0.3s;
+            }
+        }
+        .nav-link{
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        @include media-md{
+            padding-top: 10px;
+        }
+    }
+    @include media-md{
+        padding-top: 15px;
+    }
+}
+
+.navbar{
+    &-nav{
+        .nav-item{
+            &:hover{
+                &:last-child{
+                    transition: 0.3s;
+                    border: 1px solid rgba($white, 0.5);
+                }
+            }
+            &:last-child{
+                border: 1px solid $white;
+                box-sizing: border-box;
+                border-radius: 25px;
+                margin-left: 15px;
+                transition: 0.3s;
+            }
+        }
+        .nav-link{
+            color: $white !important;
+            font-family: $terciary-font;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 7px 16px !important;
+            &:hover{
+                .fa-solid{
+                    transition: 0.3s;
+                    margin-right: 15px;
+                }
+            }
+            .fa-solid{
+                transition: 0.3s;
+                margin-right: 10px;
+            }
+        }
+        @include media-md{
+            flex-direction: row;
+            margin-top: 5px;
+        }
+    }
+    &-brand {
+        @include media-xxs{
+            margin-right: 0;
+        }
+    }
+}
+
+.ponzio-logo {
+    max-width: 160px;
+    background-blend-mode: lighten;
+    transition: 0.3s;
+}
+
+.circle-logo {
+    max-width: 50px;
+    max-height: 50px;
+    transition: 0.3s; 
+    @include media-xs{
+        max-width: 35px;
+        max-height: 35px;
+    }
+}
+
+#wallet-address {
+    padding: 0px 10px !important;
+    max-width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}

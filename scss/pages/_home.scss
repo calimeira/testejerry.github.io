@@ -1,0 +1,487 @@
+.floating-cards-box{
+    position: relative;
+    z-index: 5;
+    opacity: 1;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+    &:hover {
+        #ponzioCard3 {
+            transform: translateX(-50%) translateY(-50%) matrix(1.00,0.00,0.00,1.00,-250,-0);
+        }
+        
+        #ponzioCard2 {
+            transform: translateX(-50%) translateY(-50%) matrix(1.00,0.00,0.00,1.00,0,0);
+        }
+        
+        #ponzioCard1 {
+            transform: translateX(-50%) translateY(-50%) matrix(1.00,0.00,0.00,1.00,250,0);
+        }
+    }
+    &.mobile{
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+#ponzioCard1, #ponzioCard2, #ponzioCard3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+
+    picture {
+        position: relative;
+        transition: 0.8s;
+        img {
+            max-width: 375px;
+            @include media-xl{
+                max-width: 180px;
+            }
+            @include media-lg{
+                max-width: 160px;
+            }
+            @include media-xxs{
+                max-width: 130px;
+            }
+        }
+    }
+}
+
+
+#ponzioCard3 {
+    z-index: 3;
+    transform: translateX(-50%) translateY(-50%) matrix(1.00,-0.30,-0.30,1.00,-100,-100);
+    picture {
+        animation: floating 4s ease infinite;
+    }
+}
+
+#ponzioCard2 {
+    z-index: 2;
+    transform: translateX(-50%) translateY(-50%) matrix(1.00,-0.20,-0.20,1.00,0,0);
+    picture {
+        animation: floating 4s ease 0.5s infinite;
+    }
+}
+
+#ponzioCard1 {
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%) matrix(1.00,0.13,-0.23,0.99,100,100);
+    picture {
+        animation: floating 4s ease 1s infinite;
+    }
+}
+
+#ponzioCard3Mobile, #ponzioCard2Mobile, #ponzioCard1Mobile{
+    position: relative;
+    img{
+        @include media-sm{
+            min-width: 225px;
+        }
+    }
+}
+
+#ponzioCard3Mobile{
+    z-index: 1;
+    left: -125px;
+    top: 60px;
+}
+#ponzioCard2Mobile{
+    z-index: 2;
+}
+#ponzioCard1Mobile{
+    z-index: 3;
+    left: 160px;
+    top: -45px;
+    @include media-sm{
+        left: 130px;
+    }
+}
+
+.home-section {
+    padding: 190px 0 130px 0;
+    .btn-primary{
+        margin-right: 5px;
+    }
+}
+
+.hero-text{
+    position: relative;
+    z-index: 5;
+    opacity: 1;
+    p{
+        margin-bottom: 20px;
+    }
+    @include media-xs{
+        .btn-primary{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.resume-section {
+    position: relative;
+}
+
+.resume-played-games{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    background: $black;
+    backdrop-filter: blur(40px);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    padding: 0;
+    margin: 0;
+    &-border{
+        position: relative;
+        top: -50px;
+        background: $gradient-border;
+        padding: 3px;
+        border-radius: 4px;
+    }
+    @include media-md{
+        flex-wrap: wrap;
+    }
+}
+
+.resume-games-item{
+    padding: 35px 0;
+    .resume-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    @include media-md{
+        flex-grow: 1;
+        flex-basis: 50%;
+        max-width: 50%;
+        text-align: center;
+    }
+}
+
+
+.time-line-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 568px;
+
+    li {
+        max-width: 50%;
+        padding-bottom: 30px;
+        position: relative;
+
+        @include media-sm {
+            max-width: 60%;
+            text-align: center;
+            padding-top: 31px;
+            margin: 0 auto;
+        }
+
+        &:before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background-color: $primary-color;
+            @include border-radius(50%);
+            position: absolute;
+            right: -8px;
+            top: 6px;
+    
+            @include media-sm {
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &:after {
+            content: "";
+            width: 3px;
+            height: 100%;
+            position: absolute;
+            right: -1.5px;
+            top: 6px;
+            background: rgb(165,118,28);
+            background: -moz-linear-gradient(180deg, rgba(165,118,28,1) 0%, rgba(220,156,34,0.21) 100%);
+            background: -webkit-linear-gradient(180deg, rgba(165,118,28,1) 0%, rgba(220,156,34,0.21) 100%);
+            background: linear-gradient(180deg, rgba(165,118,28,1) 0%, rgba(220,156,34,0.21) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a5761c",endColorstr="#dc9c22",GradientType=1);
+
+            @include media-sm {
+                height: 25px;
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        
+        & > * {
+            padding-right: 30px;
+
+            @include media-sm {
+                padding-right: 0;
+            }
+        }
+
+        &:nth-child(odd) {
+            margin: 0 0 0 auto;
+
+            @include media-sm {
+                margin: 0 auto;
+            }
+
+            &:after {
+                right: auto;
+                left: -1.5px;
+
+                @include media-sm {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            &:before {
+                right: auto;
+                left: -8px;
+
+                @include media-sm {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            
+            & > * {
+                padding-left: 30px;
+                padding-right: 0;
+
+                @include media-sm {
+                    padding-left: 0;
+                }
+            }
+
+            .time-line-title {
+                &:before {
+                    right: auto;
+                    left: -8px;
+
+                    @include media-sm {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+
+        }
+
+        &:nth-child(even) {
+            text-align: right;
+
+            @include media-sm {
+                text-align: center;
+            }
+        }
+
+        &:last-child {
+            &:after {
+                display: none;
+                @include media-sm {
+                    display: block;
+                }
+            }
+        }
+
+    }
+}
+
+.time-line-title {
+    position: relative;
+}
+
+.video-container {
+    position: relative;
+    .btn-play{
+        position: absolute;
+        left: 50%;
+        top: calc(50% - 35px);
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+    &.home {
+        margin: 40px 0 105px 0;
+    }
+    .video-clickeable{
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.roadmap-section{
+    .title-secondary{
+        @include media-sm{
+            max-width: 265px;
+        }
+    }
+    .vertical-line{
+        top: 195px;
+    }
+}
+
+.gold-divider {
+    border-bottom: 1px solid $primary-color;
+}
+
+.gold-box-img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.benefits{
+    &-section {
+        padding: 160px 0 120px 0;
+        position: relative;
+        z-index: 8;
+        .vertical-line{
+            &.title{
+                max-height: 340px;
+                @include media-md{
+                    display: none;
+                }
+            }
+        }
+        .title-secondary{
+            max-width: 335px;
+        }
+        @include media-sm{
+            padding: 20px 0;
+        }
+    }
+}
+
+
+.market-section{
+    position: relative;
+    z-index: 5;
+    .circle-blur{
+        right: -165px;
+        transform: translateY(-50%);
+        top: -115px;
+    }
+}
+
+.market-title-box{
+    display: flex;
+    justify-content: space-between ;
+    margin-bottom: 113px;
+    .title-secondary{
+        @include media-sm{
+            margin-bottom: 50px;
+            max-width: 235px;
+        }
+    }
+    @include media-sm{
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+.list-nfts{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    &.home{
+        margin-bottom: 130px;
+    }
+    @include media-lg{
+        grid-template-columns: repeat(4,1fr);
+    }
+    @include media-md{
+        grid-template-columns: repeat(3,1fr);
+    }
+    @include media-sm{
+        grid-template-columns: repeat(2,1fr);
+    }
+    @include media-xxs{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+.team-list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 80px;
+    li {
+        max-width: 20%;
+        flex-basis: 20%;
+        flex-grow: 1;
+        @include media-md {
+            max-width: 49%;
+            flex-basis: 49%;
+            margin-bottom: 45px;
+        }
+        @include media-xs {
+            max-width: 100%;
+            flex-basis: 100%;
+            margin-bottom: 45px;
+        }
+    }
+    @include media-md{
+        padding: 0;
+    }
+}
+
+.team-section{
+    position: relative;
+    .circle-blur{
+        width: 745px;
+        height: 745px;
+        right: 0;
+        transform: translateX(50%);
+        top: -125px;
+        opacity: 0.5;
+    }
+    .title-secondary{
+        @include media-md{
+            max-width: 500px;
+        }
+        @include media-sm{
+            max-width: 265px;
+        }
+    }
+    .vertical-line{
+        left: 66px;
+        @include media-md{
+            left: 6px;
+            top: 160px;
+        }
+        @include media-xs{
+            left: 40px;
+        }
+    }
+}
+
+.hero-buttons-mobile{
+    top: -150px;
+    position: relative;
+    z-index: 80;
+    @include media-sm{
+        top: -50%;
+    }
+}

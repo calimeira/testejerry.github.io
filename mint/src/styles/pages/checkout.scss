@@ -1,0 +1,75 @@
+@import '../imports-helpers.scss';
+@import '../imports.scss';
+
+
+.nft-resume {
+    background: $black;
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(40px);
+    border-radius: 4px;
+    padding: 40px 50px 90px 25px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    &::before{
+        background: $gradient-blackout;
+        opacity: 0.5;
+        content: "";
+        z-index: 2;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        right: 3px;
+        bottom: 3px;
+    }
+    @include media-md{
+        flex-direction: column;
+        align-items: center;
+    }
+    @include media-xs{
+        padding: 40px 20px 20px 20px;
+    }
+}
+
+.info-nft-box{
+    padding-left: 40px;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    @include media-md{
+        margin-top: 30px;
+        padding: 0;
+    }
+}
+
+.attributes{
+    &-table{
+        width: 100%;
+        td{
+            text-align: center;
+            text-transform: uppercase;
+            font-family: $secondary-font;            
+            font-size: 16px;
+            padding: 10px 0px;
+        }
+    }
+    &-subtable{
+        width: 100%;
+        td{
+            width: 216px;
+        }
+    }
+}
+
+.title-items-table{
+    td {
+        background: $black;    
+        border-radius: 3px;
+        font-weight: 700;
+        color: $white;
+        @include media-xs{
+            color: $primary-color;
+            box-shadow: 0px 3.168px 3.168px rgba(0, 0, 0, 0.25);
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import '../imports-helpers.scss';
+
+.btn {
+    outline: none !important;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    transition: 0.3s;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    font-family: $terciary-font;
+    border-radius: 3px;
+    &:hover, &:focus {
+        border: none;
+        box-shadow: none;
+    }
+    
+    &-primary {
+        background:  $gradient-gold;
+        padding: 15px 50px;
+        display: inline-flex;
+        align-items: center;
+        transition: 0.5s;
+        .fas{
+            margin-left: 20px;
+        }
+        &:hover, &:focus {
+            transition: 0.5s;
+            background:  $gradient-gold-inverse;
+        }        
+        @include media-xl{
+            padding: 15px 40px;
+        }
+        @include media-md{
+            text-align: center;
+            justify-content: center;
+            width: 100%;    
+        }
+    }
+    
+    &-secondary {
+        border: 1px solid rgba($white, 0.3);
+        background: transparent;
+        transition: 0.5s;
+        padding: 14px 70px;
+        &:hover, &:focus {
+            transition: 0.5s;
+            border: 1px solid $white;
+            background: transparent;
+        }
+        @include media-xl{
+            padding: 15px 60px;
+        }
+        @include media-md{
+            text-align: center;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+    &.mint {
+        width: 100%;
+    }
+}
+
+#buttonMinus, #buttonPlus{
+    @include media-md{
+        flex-grow: 1;
+    }
+}

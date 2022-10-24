@@ -1,0 +1,22 @@
+// VARIABLES
+$primary-font: 'Space Grotesk', sans-serif;
+$secondary-font: 'Inter', sans-serif;
+$terciary-font: 'Poppins', sans-serif;
+
+// COLORES
+$black: #131313;
+$gray: #535353;
+$white: #FFFFFF;
+
+$menu-bg: #131313;
+
+$primary-color: #A5761C; // DORADO OSCURO
+$secondary-color: #D09420; // DORADO CLARO
+$terciary-color: #F2C46D;
+
+$gradient-blackout: linear-gradient(360deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 100%);
+$gradient-gold:  linear-gradient(97deg, rgba(165,118,28,1) 23%, rgba(220,156,34,1) 60%, rgba(180,127,26,1) 98%);
+$gradient-gold-inverse: linear-gradient(97deg, rgba(220,156,34,1) 23%, rgba(207,147,31,1) 50%, rgba(180,127,26,1) 73%);
+$gradient-gold-radial: radial-gradient(circle, rgba(165,118,28,1) 38%, rgba(173,123,27,0.28335084033613445) 70%, rgba(180,127,26,0) 100%);
+$gradient-border: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(165,118,28,0.3) 50%);
+$gradient-frame: linear-gradient(168.82deg, #DC9C22 3.74%, #A5761C 42.97%, #A5761C 74.04%, #523808 97.48%);

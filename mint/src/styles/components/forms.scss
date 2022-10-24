@@ -1,0 +1,168 @@
+@import '../imports-helpers.scss';
+
+.grecaptcha-badge{
+    bottom: 200px !important;
+    @include media-xs {
+        display: none !important;
+    }
+}
+
+form {
+    
+    .form-password {
+        position: relative;
+        #form-eye {
+            cursor: pointer;
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .form-control:valid, .form-control:invalid {
+            background-position: right calc(0.375em + 2.1875rem) center;
+        }
+        .was-validated .form-control:valid, .was-validated .form-control:invalid {
+            padding-right: calc(1.5em + 2.75rem);
+        }
+    }
+    
+    &.was-validated .form-control:invalid {
+        background-image: url('../../../public/img/warning-invalid.svg');
+    }
+    
+    &.was-validated {
+        input:invalid, select:invalid, textarea:invalid {
+            animation: shake 300ms;
+        }
+    }
+
+    @keyframes shake {
+        25% { transform: translateX(4px); }
+        50% { transform: translateX(-4px); }
+        75% { transform: translateX(4px); }
+    }
+    
+}
+
+.input-group{
+    background: $black;
+    border: 1px solid $primary-color;
+    border-radius: 3px;
+    color: $white;
+    width: fit-content;
+    .btn{
+        padding: 20px 30px;
+        @include media-xs{
+            padding: 15px 20px; 
+            max-width: 70px;
+        }
+    }
+    @include media-xs{
+        justify-content: space-between;
+    }
+}
+
+.form-control{
+    background: transparent;
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 15px;
+    border: 1px solid $primary-color;
+    color: $white;
+    &::placeholder{
+        font-family: $secondary-font;
+        font-weight: 400;
+        color: $white;
+        font-size: 18px;
+        opacity: 0.5;
+    }
+    &:focus{
+        color: $white;
+        background: transparent;
+        box-shadow: none;
+        border: 1px solid $primary-color;
+    }
+}
+
+.collection-box{
+    .btn-primary{
+        display: block;
+    }
+}
+
+.amount-form {
+    .form-control{
+        max-width: 35px;
+        text-align: center;
+        border: none;
+        padding: 0;
+        font-size: 16px;      
+        &::placeholder{
+            opacity: 1;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        &:focus{
+            border: none;
+        }
+    }
+    input[type=number] {
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+        margin: 0;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+    .counter-input{
+        @include media-md{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+//THUMBS 
+
+.thumb-nft{
+    background: $gradient-frame;
+    padding: 15px 16px 20px 16px;
+    border-radius: 6px;
+    height: auto;
+    width: 100%;
+    max-height: 417px;
+    max-width: 417px;
+    position: relative;
+    z-index: 3;
+    &-figure{
+        position: relative;
+        margin: 0;
+    }
+    &-figcaption {
+        background-image: url(../../../public/img/frame-thumb.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 60%;
+        padding: 20px 15px 13px 5px;
+        @include media-xs{
+            bottom: -5px;
+            width: 75%;
+        }
+    }
+    &-img{
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+}
+
